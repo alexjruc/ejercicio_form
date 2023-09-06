@@ -1,0 +1,23 @@
+.users {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.user {
+	max-width: 300px;
+	padding: 1rem;
+	background-color: lightcoral;
+}
+
+.btn--delete {
+	color: #fff;
+	background-color: red;
+	border: none;
+	width: 100%;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+}
