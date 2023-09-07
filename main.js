@@ -66,19 +66,14 @@ drawUser(users);
 
 function deleteUsers() {
 	
-	cloneUsers = structuredClone(users);
-	console.log(users);
-
 	const deleteButtons = document.querySelectorAll(".btn--delete")
-	// console.log(deleteElements);
-	const user = document.querySelectorAll(".user")
-	// console.log(user);
-	
+	//const user = document.querySelectorAll(".user")
+
 	for (let i = 0; i < deleteButtons.length; i++) {
 		deleteButtons[i].addEventListener("click", function (){
-			user[i].style.display = "none";
-		// 	users.splice(i, 1);
-		// 	drawUser(users)
+			//user[i].style.display = "none";
+			users.splice(i, 1);
+			drawUser(users)
 		} )
 	}
 }
