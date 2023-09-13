@@ -18,9 +18,6 @@ const users = [
 	},
 ];
 
-// const users = []
-
-
 formUser.addEventListener("submit", function (e) {
 	e.preventDefault();
 
@@ -40,8 +37,8 @@ formUser.addEventListener("submit", function (e) {
 	drawUser(users);
 
 	formUser.reset();
-
-	deleteUsers();
+	
+	deleteUsers()
 });
 
 function drawUser(array) {
@@ -52,7 +49,7 @@ function drawUser(array) {
 		<div class="user">
 			<h3>nombre: ${username}</h3>
 			<p>correo: ${useremail}</p>
-			<button class="btn--delete">Eliminar</button>
+			<button class="btn_delete">Eliminar</button>
 		</div>
 		`;
 	}
@@ -60,25 +57,20 @@ function drawUser(array) {
 	const usersHTML = document.querySelector(".users");
 	usersHTML.innerHTML = html;
 
+	deleteUsers() 
 }
-drawUser(users);
-
 
 function deleteUsers() {
+	const deleteButtons = document.querySelectorAll(".btn_delete");
 	
-	const deleteButtons = document.querySelectorAll(".btn--delete")
-	//const user = document.querySelectorAll(".user")
-
 	for (let i = 0; i < deleteButtons.length; i++) {
 		deleteButtons[i].addEventListener("click", function (){
-			//user[i].style.display = "none";
 			users.splice(i, 1);
 			drawUser(users)
-		} )
+		})
 	}
 }
-deleteUsers();
 
-
+drawUser(users);
 
 
